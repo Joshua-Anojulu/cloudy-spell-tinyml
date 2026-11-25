@@ -1,0 +1,47 @@
+OK   60 settings computed
+OK   night and robustness runs cover the same 60 settings
+OK   an hour of S costs more than an hour of sleep
+OK   M is unaffordable on average at the lowest sun and affordable at the others
+OK   S always fits the mean harvest and L never does
+OK   Monte Carlo agrees with the exact rates (|z| < 3.5 on 20 comparisons)
+OK   energy balance holds in simulation
+OK   power iteration equals the direct solve
+OK   abundant sun: every fixed policy scores its recall
+OK   abundant sun: the optimum is the recall of L
+OK   a 2 J battery cannot carry L through the night
+OK   no sun: nothing detected
+OK   L is never the best fixed model
+OK   the optimal policy runs L in every setting
+OK   the optimal policy always spills less than always-S ever does
+OK   optimum certified to 1e-7
+OK   the optimum is never below a fixed policy or the cascade
+OK   the cascade is never worse than the best fixed model
+OK   the optimum gains more than half a point everywhere, so the share is defined in all settings
+OK   the cascade changes model a few times a day at most
+OK   example: M beats S at p=0.5 and S beats M at p=0.95
+OK   example: cascade and optimal policy are never idle
+OK   example with spells: cascade and optimum spill almost nothing
+OK   example with spells: the adaptive policies run mostly S and several hours of L
+OK   the optimal policy sleeps exactly in the settings with the lowest sun
+OK   45 (site, sun, battery) cases
+OK   the model's cloudy day harvests a third of the mean
+OK   text says 'in one case' (singular)
+OK   the fitted model overestimates always-M and hardly ever underestimates it
+OK   the clairvoyant bound is never below the cascade
+OK   night: every change of the best fixed model is towards a smaller model
+OK   night-heavy events make the larger battery worth more (median over sun and persistence)
+OK   night: the cascade is never worse than the best fixed model
+OK   +-5% reading error: still above the best fixed model everywhere
+OK   retuning never hurts
+OK   aged battery, old thresholds: never below the best fixed model of the aged node
+OK   the paper's menu and six others
+OK   menu 'paper': 48 settings
+OK   menu 'energy x2 per size': 48 settings
+OK   menu 'energy x8 per size': 48 settings
+OK   menu 'sleep floor halved': 48 settings
+OK   menu 'sleep floor doubled': 48 settings
+OK   menu 'recalls 0.70/0.85/0.95': 48 settings
+OK   menu 'recalls 0.85/0.90/0.93': 48 settings
+OK   the only menu without a change is the eightfold one, where S is the best fixed model in every setting
+OK   under every menu the cascade is never below the best fixed model
+OK   L is the best fixed model somewhere only under the twofold menu

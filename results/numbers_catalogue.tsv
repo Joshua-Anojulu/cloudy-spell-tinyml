@@ -1,0 +1,152 @@
+macro	value	source
+NQuantumMj	6	solar_node.Q_J
+NCloudFactor	0.2	solar_node.Setting.cloud_factor
+NSleepUw	10	solar_node.SLEEP_J_PER_H
+NSleepMjH	36	menu
+NInferPerHour	60	solar_node.INFER_PER_H
+NRecallS	0.80	menu
+NInferS	0.5	menu
+NInferHourS	30	menu
+NHourS	66	menu
+NDayJS	1.58	menu
+NRecallM	0.90	menu
+NInferM	2	menu
+NInferHourM	120	menu
+NHourM	156	menu
+NDayJM	3.74	menu
+NRecallL	0.95	menu
+NInferL	8	menu
+NInferHourL	480	menu
+NHourL	516	menu
+NDayJL	12.38	menu
+NDayJSleep	0.86	menu
+NHList	6, 8, 12	experiments.HS
+NPList	0.5, 0.7, 0.85, 0.95	experiments.PS
+NCList	1, 2, 5, 10, 20	experiments.CS
+NMeanHarvestList	3.6, 4.8 and 7.2	0.6 H
+NMeanShare	0.6	mean harvest / H
+NnSettings	60	grid
+NnMcSettings	four	checks.json
+NMcReplicas	400	checks.json
+NMcDays	3000	checks.json
+NMcMaxZ	1.63	checks.json, rounded up
+NAbundantOpt	0.95	checks.json
+NAbundantSmallC	2	checks: C of the small-battery case
+NAbundantSmallL	59	checks.json
+NnFlip	6	grid: best fixed model at p=0.5 vs p=0.95
+NnSunBattery	15	grid
+NSpillSMin	56	grid: spill of always-S
+NSpillSMax	78	grid: spill of always-S
+NOptGainMin	0.8	grid: optimum minus best fixed
+NOptGainMax	10.0	grid
+NOptGainMedian	5.8	grid
+NnOptUsesL	60	grid: hours of L under the optimal policy
+NOptSpillMax	39	grid: spill of the optimal policy
+NOptSpillMaxC	1	grid
+NCascShareMedian	79	grid: (cascade - best fixed)/(optimum - best fixed)
+NCascShareWorst	27	grid
+NCascShareWorstC	1	grid
+NCascGapMax	2.9	grid: optimum minus cascade, rounded up
+NSwitchMedian	1.4	grid: model changes per day under the cascade
+NSwitchMax	3.0	grid
+NSwitchCostPct	0.7	max switches per day x energy of one L inference / smallest mean daily harvest, rounded up
+NExH	8	example
+NExC	10	example
+NExP	0.95	example
+NFigH	8	figure
+NExMInd	87.2	grid
+NExSInd	80.0	grid
+NExMPers	66.7	grid
+NExCasc	86.8	grid
+NExOpt	87.0	grid
+NFigLMax	34	grid: always-L at H=8, rounded up
+NOptTableEntries	80{,}064	grid
+NOptTableC	10	grid
+NExMIdlePers	6.2	grid: hours per day browned out, always-M, example with spells
+NExMIdleInd	0.7	grid: the same with independent days
+NExOptLPers	5.4	grid: hours of L per day, optimal policy, example with spells
+NExOptSleepPers	0.0	grid: hours asleep per day, optimal policy, example with spells
+NExCascSPers	10.4	grid: hours of S per day, cascade, example with spells
+NExMSpillPers	41	grid: spill of always-M, example with spells
+NOptSleepH	6	grid
+NnOptSleeps	20	grid: settings in which the optimal policy sleeps or browns out at all
+NOptSleepMaxH	3.4	grid: most hours asleep per day under the optimal policy
+NSiteDays	1{,}826	sites.json
+NSiteShuffles	200	sites.json
+NSiteCfMin	0.63	sites: lower half / upper half of days
+NSiteCfMax	0.80	sites
+NSitePMin	0.69	sites: P(stay in the same half)
+NSitePMax	0.75	sites
+NSiteSpellMax	76	sites: longest run of below-median days
+NSiteCases	45	sites
+NSiteOrderLossMax	4.3	sites: always-M, shuffled mean minus recorded order
+NSiteOrderLossMaxWhere	Dhaka, $H=6$~J, $C=10$~J	sites
+NSiteOrderLossSMax	0.2	sites: always-S, shuffled minus recorded
+NSiteFlip	0	sites: best fixed model, recorded vs shuffled order
+NSiteSameBest	all 45	sites: cases with the same best fixed model in both orders
+NSiteBelowThirdMax	2.0	data: share of recorded days below a third of the site mean, largest over sites, rounded up
+NSiteMBelowAll	22	sites: cases where recorded-order always-M is below all shuffles
+NSiteSpillSMin	56	sites
+NSiteSpillSMax	78	sites
+NSiteCascGainMedian	2.5	sites: tuned cascade minus best fixed, test years
+NSiteCascGainMin	0.0	sites
+NSiteCascGainMax	7.8	sites
+NSiteCascBelowFixed	one	sites: cases where the tuned cascade is below the best fixed model
+NSiteCascWorstBelow	0.04	sites: by how much the tuned cascade is below the best fixed model in that case
+NSiteShareMedian	85	sites: (cascade - best fixed)/(bound - best fixed), test years
+NSiteFitErrMax	4.5	sites: fitted two-state model minus replay, always-M
+NSiteModelTunedBelowFixed	11	sites: model-tuned cascade below best fixed
+NSiteCascToClairMedian	0.4	sites: clairvoyant bound minus tuned cascade, test years
+NSiteCascToClairMax	3.5	sites
+NSiteCascOracleMax	0.7	sites: thresholds tuned on the test years minus tuned on training, rounded up
+NSiteModelTunedLossMedian	0.9	sites: record-tuned minus model-tuned cascade, test years
+NSiteModelTunedLossMax	4.3	sites
+NSiteModelTunedLossMin	-0.1	sites
+NSiteMdpMinusCascMedian	0.0	sites: fitted-model optimal policy minus tuned cascade, test years
+NSiteMdpMinusCascMin	-1.1	sites
+NSiteMdpMinusCascMax	2.4	sites
+NSiteRefH	6	table
+NSiteRefC	10	table
+NNightSharePct	70	experiments.NIGHT_SHARE
+NNightFlip	6	night vs grid: best fixed model
+NNightFlipSmaller	6	night: changes towards a smaller model
+NNightFlipLarger	0	night: changes towards a larger model
+NNightCLo	2	robust
+NNightCHi	10	robust
+NNightBatteryGain	3.8	night: optimum at C=10 minus C=2, median over (H, p)
+NUniformBatteryGain	3.6	grid: the same with uniform events
+NNightShareMedian	72	night: share of the gap recovered by the retuned cascade
+NNightShareN	60	night: settings where the optimum gains more than half a point
+NNoiseLoPct	2	robust
+NNoiseLoMedian	0.1	robust: loss with a reading error of +-2% of capacity
+NNoiseLoMax	2.4	robust
+NNoiseLoMin	-0.1	robust
+NNoiseLoBeats	60	robust: still above the best fixed model
+NNoiseMidPct	5	robust
+NNoiseMidMedian	0.4	robust: loss with a reading error of +-5% of capacity
+NNoiseMidMax	5.7	robust
+NNoiseMidMin	0.0	robust
+NNoiseMidBeats	60	robust: still above the best fixed model
+NNoiseHiPct	10	robust
+NNoiseHiMedian	1.0	robust: loss with a reading error of +-10% of capacity
+NNoiseHiMax	8.2	robust
+NNoiseHiMin	0.0	robust
+NNoiseHiBeats	47	robust: still above the best fixed model
+NFadePct	20	experiments.cmd_robust
+NFadeLossMedian	0.2	robust: retuned minus old thresholds at 80% capacity
+NFadeLossMax	4.7	robust
+NFadeBeats	60	robust
+NNoiseWorstC	20	robust: battery of the worst case at +-5%
+NMenuCMax	10	experiments.MENU_CS
+NMenuPairs	12	menu: (sun, battery) pairs
+NMenuOthers	six	menu.json
+NMenuFlipMenus	five	menu: other menus under which persistence changes the best fixed model
+NMenuFlipMin	2	menu
+NMenuFlipMax	7	menu
+NMenuSpillMin	32	menu: spill of always-S, all other menus
+NMenuSpillMax	84	menu
+NMenuShareMin	54	menu: median share of the gap recovered, smallest over menus
+NMenuShareMax	85	menu
+NMenuLBest	4	menu: settings in which L is the best fixed model, twofold menu
+NMenuSettings	48	menu: settings per menu
+NCodeUrl	\url{https://github.com/Joshua-Anojulu/cloudy-spell-tinyml}	environment variable AIOT_CODE_URL
