@@ -19,7 +19,7 @@ import solar_node as sn
 HERE = os.path.dirname(os.path.abspath(__file__))
 RES = os.path.join(HERE, "..", "results")
 PAPER = os.path.join(HERE, "..", "paper")
-CODE_URL = os.environ.get("AIOT_CODE_URL", "")
+CODE_URL = os.environ.get("AIOT_CODE_URL", "https://github.com/Joshua-Anojulu/cloudy-spell-tinyml")
 
 MACROS = {}
 CATALOGUE = []
