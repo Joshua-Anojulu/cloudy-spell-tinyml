@@ -57,3 +57,8 @@ Division.
 
 The code, the analysis and the text of the paper were prepared with an LLM-based assistant (Claude, Anthropic) under
 the authors' direction, as the paper discloses.
+
+## Licence
+
+The code is under the MIT licence (see `LICENSE`). The irradiance records in `data/` come from the NASA POWER
+project and keep their source's terms; see `data/README_data.md`.
